@@ -11,7 +11,7 @@
 echo "Auto Install LAMP ALMALINUX"
 echo "###########################"
 
-#Update Centos
+#Update ALMALINUX
 sudo setenforce 0
 yum -y update
 yum -y install wget
