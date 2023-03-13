@@ -2,6 +2,9 @@
 
 LAMP AUTO INSTALL SCRIPT FOR ALMALINUX
 
+This Auto Install Script Works For XFS (XFILESHARE) Install
+https://sibsoft.net/xfilesharing.html
+
 Package Contents
 
 Apache
