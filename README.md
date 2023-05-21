@@ -1,83 +1,132 @@
-# ALMALINUX-LAMP-AUTOINSTALL
 
-LAMP AUTO INSTALL SCRIPT FOR ALMALINUX
-
-This Auto Install Script Works For XFS (XFILESHARE) Install
-https://sibsoft.net/xfilesharing.html
-
-Package Contents
-
-Apache
-
-MYSQL (MARIADB)
-
-PHP 7.4
-
-PHPMYADMIN
-
-FFMPEG
-
-CERTBOTS LETSENCRYPT
-
-OPENVPN
-
-How to use
-Login as root and enter to start install
-Do the Following Command:
-wget https://raw.githubusercontent.com/KALIXHOSTING/ALMALINUX-LAMP-AUTOINSTALL/main/install.sh
-# chmod 777 ./install.sh 
-then run 
-
-# ./install.sh
+![Logo](https://kalixhosting.com/img/kalixhostinglogo.png)
 
 
-Enable Mod Rewrite
+# ALMALINUX LAMP AUTO INSTALL
 
-# sudo nano /etc/httpd/conf.modules.d/00-base.conf
+ALMALINUX LAMP AUTO INSTALLER SCRIPT
 
 
-Add this Line to file
+## Authors
 
-# LoadModule rewrite_module modules/mod_rewrite.so
+- [@maven_htx](https://instagram.com/maven_htx)
 
-Then open This File
-# sudo nano /etc/httpd/conf/httpd.conf
 
-And Change 
+## Features
 
-# <Directory /var/www/html>
+- APACHE2
+- PHP 7.4
+- MARIADB
+- PHPMYADMIN
+- COMPOSER
+- FFMPEG
+- PHPMYADMIN
+- LETS ENCRYPT
+- OPENVPN
+- TRANSMISSIONBT (TORRENT DOWNLOADER)
+- ZIP
+- RAR 
+- FIREWALL RULES ADDED
+- RUBY
+
+## MADE TO WORK WITH (XFILESHARE) XFS 
+
+[XFS](https://sibsoft.net/xfilesharing.html)
+
+
+
+
+## Installation
+
+Install Script
+
+```bash
+ wget -4 https://scripts.kalixhosting.com/almalinux/lampstacks -O install.sh && bash install.sh
+```
+## ENABLE MOD REWRITE
+
+```bash
+sudo nano /etc/httpd/conf.modules.d/00-base.conf
+```
+## ADD THIS LINE
+
+```bash
+LoadModule rewrite_module modules/mod_rewrite.so
+```
+
+## Now open
+
+```bash
+sudo nano /etc/httpd/conf/httpd.conf
+```
+
+## Change 
+```bash
+<Directory /var/www/html>
     AllowOverride From None
  </Directory>
- 
- to
- # <Directory /var/www/html>
+```
+
+# To
+
+```bash
+<Directory /var/www/html>
     AllowOverride All
  </Directory>
+```
+## Restart Apache2 
 
-Now Restart Apache
-# sudo systemctl restart httpd
+```bash
+sudo systemctl restart httpd
+```
 
 
-Enable Let’s Encrypt on Host
-***Make Sure You Name it as your domainname 
-go to
-# cd /etc/httpd/conf.d
-Then 
-# sudo nano yourDomainName.conf 
 
-# 
-# <VirtualHost *:80>
+
+
+
+
+
+## WANT TO SET UP VIRUAL HOST RUN THESE COMMANDS 
+
+Replace yourDomainName with your Desired Domain
+
+
+```bash
+cd /etc/httpd/conf.d
+
+sudo nano yourDomainName.conf 
+
+INSIDE OF NANO PASTE THESE BELOW 
+
+ <VirtualHost *:80>
     ServerName yourDomainName.com
     DocumentRoot /var/www/html
     ServerAlias www.yourDomainName.com
     ErrorLog /var/www/error.log
     CustomLog /var/www/requests.log combined
-# </VirtualHost>
+</VirtualHost>
 
-Now Restart Apache
-# sudo service httpd restart  
+CONTROL X   Y SAVE 
 
-Now Run Let’s Encrypt Command
-# sudo certbot --apache -d example.com
+NOW RUN 
 
-Now your host will have SSL with Let’s Encrypt Enabled
+sudo service httpd restart  
+
+```
+
+## ADD LETS ENCRYPT SSL TO VirtualHost
+
+RUN THIS COMMAND
+
+```bash
+sudo certbot --apache -d example.com
+
+```
+
+
+
+
+
+## 🔗 Links
+KALIXHOSTING https://kalixhosting.com/
