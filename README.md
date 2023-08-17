@@ -1,5 +1,5 @@
 
-![Logo](https://kalixhosting.com/img/logo-dark.svg)
+![Logo](https://kalixhosting.com/img/logo.svg)
 
 
 # ALMALINUX LAMP AUTO INSTALL
