@@ -41,7 +41,7 @@ ALMALINUX LAMP AUTO INSTALLER SCRIPT
 Install Script
 
 ```bash
- wget -4 https://scripts.kalixhosting.com/almalinux/lampstacks -O install.sh && bash install.sh
+ wget -4 https://scripts.kalixhosting.com/centos/almalinux/lamp/ -O install.sh && bash install.sh
 ```
 ## ENABLE MOD REWRITE
 
