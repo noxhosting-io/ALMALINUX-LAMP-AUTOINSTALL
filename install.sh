@@ -129,10 +129,6 @@ sudo yum install epel-release -y
 sudo yum localinstall --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm -y 
 sudo yum install ffmpeg ffmpeg-devel -y
 
-#MODREWRITE 
-sudo sed -i '/LoadModule rewrite_module modules\/mod_rewrite\.so/!b;n;c\LoadModule rewrite_module modules/mod_rewrite.so' /etc/httpd/conf.modules.d/00-base.conf
-
-#PHPINI
 
 
 #install OPENVPN
