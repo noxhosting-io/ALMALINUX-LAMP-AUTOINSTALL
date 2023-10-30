@@ -123,6 +123,9 @@ chmod +rw /var
 chmod +rw /var/www/html
 chmod 777 /var
 chmod 777 /var/www/html
+chmod 755 /var/www/cgi-bin
+chmod +rw /var/www/cgi-bin
+
 
 #install FFMPEG
 sudo yum install epel-release -y
