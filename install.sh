@@ -20,13 +20,7 @@ yum install wget nano zip unzip -y
 chmod +rw /root
 chmod 777 /root
 yum -y install epel-release
-#CHMOD VAR/WWW/HTML
-chmod +rw /var
-chmod +rw /var/www/html
-chmod 777 /var
-chmod 777 /var/www/html
-chmod +rw /var/www/cgi-bin
-chmod 777 /var/www/cgi-bin
+
 
 yum -y update
 
@@ -120,8 +114,16 @@ sudo dnf install certbot python3-certbot-apache mod_ssl -y
 #btop
 sudo dnf install epel-release
 sudo dnf install btop -y
-
+#install perl
 yum -y install perl-CGI perl-libwww-perl perl-DBI perl-DBD-MySQL perl-GD perl-Cache-Memcached perl-Digest-SHA perl-LWP-Protocol-https
+
+#CHMOD VAR/WWW/HTML
+chmod +rw /var
+chmod +rw /var/www/html
+chmod 777 /var
+chmod 777 /var/www/html
+chmod +rw /var/www/cgi-bin
+chmod 777 /var/www/cgi-bin
 #RESTART APACHE
 systemctl restart httpd.service
 
