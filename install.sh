@@ -20,6 +20,13 @@ yum install wget nano zip unzip -y
 chmod +rw /root
 chmod 777 /root
 yum -y install epel-release
+#CHMOD VAR/WWW/HTML
+chmod +rw /var
+chmod +rw /var/www/html
+chmod 777 /var
+chmod 777 /var/www/html
+chmod +rw /var/www/cgi-bin
+chmod 777 /var/www/cgi-bin
 
 yum -y update
 
@@ -118,13 +125,7 @@ yum -y install perl-CGI perl-libwww-perl perl-DBI perl-DBD-MySQL perl-GD perl-Ca
 #RESTART APACHE
 systemctl restart httpd.service
 
-#CHMOD VAR/WWW/HTML
-chmod +rw /var
-chmod +rw /var/www/html
-chmod 777 /var
-chmod 777 /var/www/html
-chmod 755 /var/www/cgi-bin
-chmod +rw /var/www/cgi-bin
+
 
 
 #install FFMPEG
